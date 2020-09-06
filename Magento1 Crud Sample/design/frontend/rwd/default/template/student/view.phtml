@@ -1,0 +1,44 @@
+<style>
+    table{
+        width: 100%;
+        border-collapse:collapse;
+    }
+
+    td{
+        text-align: left;
+        border: 1px solid black;
+        padding: 2px;
+    }
+</style>
+<div>
+    <a href="<?= $this->getUrl('macapobres/student/add') ?>">ADD</a>
+</div>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Gender</td>
+                <td>Email</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($this->getStudentCollection() as $student): ?> 
+                <tr>
+                    <td><?= $student->getId() ?></td>
+                    <td><?= $student->getFirstName() ?></td>
+                    <td><?= $student->getLastName() ?></td>
+                    <td><?= $student->getGender() ?></td>
+                    <td><?= $student->getEmail() ?></td>
+                    <td>
+                        <a href="<?= $this->getUrl('macapobres/student/Edit') ?>?id=<?= $student->getId() ?>">Edit</a>
+                        <a href="<?= $this->getUrl('macapobres/student/delete') ?>?id=<?= $student->getId() ?>">Delete</a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>

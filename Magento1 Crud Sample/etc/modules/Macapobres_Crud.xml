@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Macapobres_Crud>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Macapobres_Crud>
+    </modules>
+</config>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+    <macapobres_student_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="crud/student" name="crud_student" template="student/view.phtml"></block>
+        </reference>
+    </macapobres_student_index>
+    <macapobres_student_add>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="crud/student" name="crud_student" template="student/form.phtml"></block>
+        </reference>
+    </macapobres_student_add>
+     <macapobres_student_edit>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="crud/student" name="crud_student" template="student/form.phtml"></block>
+        </reference>
+    </macapobres_student_edit>
+</layout>

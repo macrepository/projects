@@ -1,0 +1,18 @@
+<div>
+    <form action="<?= $block->getUserSubmitUrl() ?>" method="POST">
+        <input name="form_key" type="hidden" value="<?php echo $block->getFormKey();?>">
+        <input type="hidden" name="entity_id" value="<?= $block->getEditId() ?>">
+        <div>
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" value="<?= !empty($block->getEditId()) ? $block->getEditInformation()->getFirstName() : ''?>">
+        </div>
+        <div>
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" value="<?= !empty($block->getEditId()) ? $block->getEditInformation()->getLastName() : '' ?>">
+        </div>
+        <div>
+            <button type="submit"><?= empty($block->getEditId()) ? __("Save") : __("Edit") ?></button>
+            <a href="<?= $block->getIndexUserUrl()?>">Back</a>
+        </div>
+    </form>
+</div>
